@@ -14,6 +14,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.set('env', env);
 app.set('port', process.env.PORT || 3888);
+app.set('view engine', 'ejs');
 
 if ('dev' == app.get('env')) {
   app.use(express.errorHandler());
